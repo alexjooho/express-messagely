@@ -32,7 +32,7 @@ function ensureLoggedIn(req, res, next) {
       return next();
     }
   } catch (err) {
-    return next(err);
+    return next(err); // need to throw error to next function so that it can be caught in route
   }
 }
 
